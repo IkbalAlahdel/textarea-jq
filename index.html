@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>Limit character input in the textarea including count</title>
+<style type="text/css">
+textarea {
+  display:block;
+  margin:1em 0;
+}  
+</style>  
+</head>
+<body>
+<form>
+<label>Maximum 200 characters</label>
+<textarea id="textarea" maxlength="200" cols="150" rows="150"></textarea>
+  <span id="rchars">200</span> Character(s) Remaining
+</form>
+
+<script>
+
+
+var maxLength = 200;
+$('textarea').keyup(function() {
+  var textlen = maxLength - $(this).val().length;
+  $('#rchars').text(textlen);
+});
+
+
+</script>
+
+
+
+</body>
+</html>
