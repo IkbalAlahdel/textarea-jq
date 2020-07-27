@@ -7,14 +7,28 @@
 <style type="text/css">
 textarea {
   display:block;
-  margin:1em 0;
-}  
+  margin:1 em;
+color: black;
+} 
+input[type=textarea].focus{
+    border: 5px solid gray;
+    border-radius: 5px;
+    height: 90vh;
+    width: 100px;
+} 
+body{
+color: white;
+background-color: #ffeaa7;
+background-image: linear-gradient(315deg, #ffeaa7 0%, #000000 74%);
+
+}
+
 </style>  
 </head>
 <body>
 <form>
 <label>Maximum 200 characters</label>
-<textarea id="textarea" maxlength="200" cols="150" rows="150"></textarea>
+<textarea id="textarea" maxlength="200" cols="150" rows="30"></textarea>
   <span id="rchars">200</span> Character(s) Remaining
 </form>
 
